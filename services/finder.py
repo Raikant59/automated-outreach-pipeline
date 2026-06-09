@@ -60,12 +60,6 @@ def get_similar_company_domains(domain):
         return set(all_domains)
 
     except Exception as e:
-        return {
-            "error": str(e)
-        }
+        print(f"Similar company error: {e}")
+        return set()
 
-
-if __name__ == "__main__":
-    domain = input().strip()
-    result = get_similar_company_domains(domain)
-    print(result)

@@ -77,18 +77,3 @@ def search_people_by_domain(domain, page=1):
     except Exception as e:
         print(f"\nERROR: {e}")
         return []
-
-
-if __name__ == "__main__":
-
-    domain = input("Domain: ").strip()
-
-    results = search_people_by_domain(domain)
-
-    print(
-        json.dumps(
-            results,
-            indent=2,
-            ensure_ascii=False
-        )
-    )
