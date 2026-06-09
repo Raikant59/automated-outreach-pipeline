@@ -32,12 +32,7 @@ def enrich_person(person_data):
             timeout=60
         )
 
-        print(f"\nStatus Code: {response.status_code}")
-
         data = response.json()
-
-        print("\n========== RAW ENRICH RESPONSE ==========")
-        print(json.dumps(data, indent=2))
 
         if data.get("error"):
             return {
@@ -89,15 +84,3 @@ def enrich_person(person_data):
             "success": False,
             "error": str(e)
         }
-
-
-if __name__ == "__main__":
-
-    sample_person = {
-        "person_id": "aaaa32ec4a3fc585970bbd03"
-    }
-
-    result = enrich_person(sample_person)
-
-    print("\n========== FINAL RESULT ==========")
-    print(json.dumps(result, indent=2))
