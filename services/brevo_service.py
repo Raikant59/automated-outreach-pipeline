@@ -86,30 +86,6 @@ def send_email(enriched_person):
         timeout=60
     )
 
+    print("\nBrevo Response Status Code:") 
     print(response.status_code)
-    print(response.text)
-
     return response.json()
-
-if __name__ == "__main__":
-
-    test_person = {
-        "first_name": "Sahil",
-        "last_name": "Chaudhary",
-        "full_name": "Sahil Chaudhary",
-
-        # Your own email for testing
-        "email": "sahilsahil102060@gmail.com",
-
-        "linkedin_url": "https://www.linkedin.com/in/test",
-
-        "company_name": "Google",
-        "company_website": "https://google.com",
-        "company_linkedin_url": "https://www.linkedin.com/company/google"
-    }
-
-    result = send_email(test_person)
-
-    print("\n========== BREVO RESPONSE ==========")
-
-    print(result)
