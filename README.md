@@ -92,7 +92,7 @@ BREVO_API_KEY=your_brevo_api_key
 ### Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Raikant59/automated-outreach-pipeline.git
 
 cd automated-outreach-pipeline
 ```
